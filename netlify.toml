@@ -1,2 +1,14 @@
+# 제품 모드
 [build]
-  functions = "functions"
+  command = "npm run build"
+  functions= "functions" # Netlify 서버리스 함수가 작성된 디렉토리
+  publish = "dist" # 프로젝트 빌드 결과의 디렉토리
+
+#개발 모드
+[dev]
+  framework ="#custom" # 프로젝트는 우리 custom 대로 하겠다
+  command = "npm run dev" # 개발 서버를 실행하는 명령
+  targetPort = 8080  # 우리 프로젝트의 포트
+  port = 8888 # Netlify 에서 실행할 포트
+  publish = "dist" 
+  autoLaunch = false  # Netlify 서버가 준비되면 자동으로 브라우저를 오픈할 건지?

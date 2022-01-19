@@ -69,12 +69,11 @@ export default {
   methods: {
     
     isMatch(path){
-      this.image
-      this.name
       if(!path) return false
-      console.log(this.$route.fullPath)
+      console.log(this.$route)
       return path.test(this.$route.fullPath)
     },
+
     toAbout(){
       console.log('!!!')
       this.$router.push('/about')

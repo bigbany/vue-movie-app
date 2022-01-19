@@ -97,10 +97,10 @@ computed: {
 },
  created() {
    console.log(this.$route)
-   this.searchMovieWithId({id: this.$route.params.id})
-    // this.$store.dispatch('movie/searchMovieWithId',{
-    //   id: this.$route.params.id
-    // })
+  //  this.searchMovieWithId({id: this.$route.params.id})
+    this.$store.dispatch('movie/searchMovieWithId',{
+      id: this.$route.params.id
+     })
   },
   methods: {
 ...mapActions('movie',[
